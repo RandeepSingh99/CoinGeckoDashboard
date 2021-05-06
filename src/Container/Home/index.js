@@ -19,15 +19,6 @@ const Home = () => {
         dispatch(getCoinGeckoData())
         setLoader(false)
     }, [])
-    useEffect(() => {
-        async function getData() {
-          const ApiData = await axios.get(
-            `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=200&regionCode=IN&key=AIzaSyAgEjjl6RR0SYn5YqBwcFnlWEYYn_AU79s`
-          );
-          console.log(ApiData);
-        }
-        getData()
-      },[]);
 
     const coinData = useSelector(state => state?.reducerCoinGecko?.data?.data)
     // const searchsData = useSelector(state => state.reducerCoinGecko.data.data)
