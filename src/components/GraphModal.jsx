@@ -42,10 +42,8 @@ const GraphModal = (props) => {
                     }]
                 })
             })
-            console.log('x', x)
-            console.log('y', y)
+            
             setLoading(false)
-            // console.log(pricesGraph)
         }
         getDataChart()
     }, [props.id])
